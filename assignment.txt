@@ -1,0 +1,102 @@
+Lab:
+1.i want to find a number called magicNumber while iteration
+
+ Solution Guide:
+  0..100 - Range
+ input no =50;
+  once if you find 50 in the range(0..100) say, i found a number.
+ inside loop you have print message "going on..." . you should not repeate "going on message" once you found a number.
+
+2.Get the score from the keyboard, display grade,keep on asking
+the score after asking question like "Do you want to continue"
+Yes
+ if yes continue the process 
+ if no terminte the process.
+
+Scanner scanner = new Scanner(System.in);
+System.out.println("Enter Score");
+int score = scanner.nextInt();
+char grade;
+if (score >= 95) {
+ grade = 'A';
+} else if (score >= 80) {
+grade = 'A';
+} else if (score >= 70) {
+grade = 'C';
+} else if (score >= 55) {
+grade = 'D';
+} else {
+grade = 'F';
+}
+System.out.println("Score is " + score + " Grade is  " + grade);
+
+3.A shopkeeper sells three products whose retail prices are as follows: 
+            Product 1 - 22.50
+            Product 2 - 44.50 
+            Product 3 - 9.98
+Write an application that reads a series of pairs of numbers as follows:
+ a) Product number 
+ b) Quantity sold
+ The application should  determine the retail price for each product. It should calculate and display the total retail value of all products sold. 
+
+
+4.Write a program that draws the following pattern
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * *
+* * *
+* *
+*
+///////////////////////////////////////////////////////////////
+OOP
+5.Start Designing for the object called "Student"
+  Identify necessary data items for the Student
+  Identify necessary biz api  like   findTotalMarks,Avg,Mean,Medean  
+
+            Student Information System
+
+   Meanu:
+   0 - Enter Student details
+   Create Object ,populate the data
+   Do you want report?
+   yes
+     1.Total Marks
+     2.Avg    
+     3.Mean
+     ..
+   1---"Total Mark"
+   Do you want to continue for next Student?
+   yes
+    repeat the step 0
+
+6. I have data in the JSON format.You have create java classes
+  and ensure that has-a relationship.
+
+User Model
+
+ {
+    "id": 1,
+    "name": "Leanne Graham",
+    "username": "Bret",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "geo": {
+        "lat": "-37.3159",
+        "lng": "81.1496"
+      }
+    },
+    "phone": "1-770-736-8031 x56442",
+    "website": "hildegard.org",
+    "company": {
+      "name": "Romaguera-Crona",
+      "catchPhrase": "Multi-layered client-server neural-net",
+      "bs": "harness real-time e-markets"
+    }
+  }
