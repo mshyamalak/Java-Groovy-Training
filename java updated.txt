@@ -1,0 +1,2244 @@
+Java
+
+
+ Pl - Simple way to talk to os shell
+
+os shell
+ 10 + 10
+
+ HLL -->Assembly---low level bit patterns
+
+ HLL-program1--->assembly --->program2--loaded  on os--hardware--will run the code.
+
+ program1 -compiler
+ program2- runtime
+
+Green: 1989 - SUN
+   Objective: Build one software for all os    
+
+1989 -1990-->1991-Test faild
+
+1991---->Virtual computing---jvm--virtual os   
+
+////////////////////////////////////////////
+JVM --Code?
+
+Pl - java Programming language
+..............................
+
+What is java pl?
+
+java pl is object oriented,functional  programming language.
+
+Programming paradigms:
+Paradigm means way of solving the problem.
+
+The language is just tool which implments the paradigm.
+
+Paradigms:
+1.procedure - c
+2.oo - c++,java,c#..
+3.fp - scheme,js,java,groovy,scala..
+4.Event driven
+5.Reactive programming
+......
+java is now object oriented, functional ,event driven,reactive programming.
+
+polyglot : Many programming languages,but runtime is same
+
+java,groovy,scala,kotlin,Ruby ----->JVM
+
+.............................................
+
+Language Design:
+1.Language fundamentals
+2.Object oriented programming
+3.Exception handling
+4.Collections
+5.IO
+
+////////////////////////////////////////
+How to start development?
+Compiler,IDE
+
+compiler,runtime => jdk - >java development kit - collection of tools and basic libs to write ,compile,test java programs.
+
+jdk is contains
+1.bin folder
+2.jre folder
+3.lib folder
+
+compiler  -javac - will convert java source code into byte code(assembly)
+
+runtime - java- will run byte on os
+
+libs - jre/lib - runtime libs
+////////////////////////////////////////////
+
+java version:
+java or jdk 1.0
+java 2
+java 3
+java 4
+java 5 - major improvments
+java 6
+java 7
+java 8 ---stable version jdk 1.8
+java 9
+java 10 
+java 11 - beta current
+////////////////////////////////////////////
+
+Java Applications: editions
+1.desk top app - JSE -java Standard Edition
+2.web apps - JEE -java Enterprise
+3.Device apps - JME - java Micro Edition | java Mobile Edition
+//////////////////////////////////////////
+
+IDE : Eclipse, IntelliJ idea,vs code,notepad,notepad++
+
+/////////////////////////////////////////////
+Eclipse:
+
+Workspace: where you are going to store your java projects
+
+javaproject layout
+projectName
+   src- -souce code
+   bin  -compiled code
+
+Coding standards:
+
+1.Source program
+ FileName.java
+FileName rules
+1.FileName must be meaningfull to the problem statement.
+HelloWorld.java
+
+2.compiled Code
+  FileName.class - Assembly code
+
+javac HelloWorld.java
+
+ HelloWorld.class
+
+java HelloWorld
+  It will load jvm on os and will load HelloWorld.class.
+
+Every pl has entry point to start program execution - main method.
+
+c / c++
+void main(){
+
+}
+
+java main method
+
+public static void main(String[]args){
+   //start your app
+}
+
+main method will load jvm into os,and will load our code on jvm...
+
+
+public class HelloWorld {
+	public static void main(String[] args) {
+        //App starts
+		System.out.println("Hello Java!");
+	}
+}
+
+Language fundamentals:
+1.type system
+2.variables
+3.literals
+4.operators
+5.control structures
+6.looping
+
+1.type system
+2.variables
+3.literals
+
+Pl -  to create program--->collection of instructions.
+Instructions  -  collection of data , how to process the data.
+
+Software:
+ ->Store the data
+ ->process the stored data
+ ->Get the Report after processing
+
+Store the data:
+1.Persitant storage - Permanent storage
+   ->File System-->data base
+2.Non persistant storage - In memory storage
+   ->Data is stored in RAM,CPU Registers
+
+In java
+ ->Store the data 
+    ->In memory
+       ->variables : Data Holder,Stores data
+     variable type x=10-value(data)-literals
+     variable type y=10;
+ ->process the stored data
+     variable result = x + y;
+ ->Get the Report after processing
+     print the result is result -read,write
+
+  type variable=value(literal)
+
+  type-->numbers-0,1 -core type.
+
+  Abstract data types
+     create new types on core type.
+
+  number
+     -text,nontext
+
+  text =characters---string
+  nontext -number
+  number
+    dec,oct,hex,binary
+   
+ 1
+ 45.89
+ 7777777777777777777777777777777777  
+ 89.9e4
+ every storage capacity called size
+ based on value,jvm will request the space  to store the value. 
+
+ int x=10;--->jvm will request os--->hardware   that i need 2 bytes memory.
+
+ number --byte,short,int,long,float,double
+
+ 10 -- 100100001
+
+int 4 bytes -2,147,483,648 to 2,147,483,647.
+
+byte 1 byte -128 to 127.
+
+byte a =10; //valid
+byte b =150; error
+
+price =90.89 // 4 bytes | 8 bytes
+
+BigInteger lightSpeed=934343434343434343434343434343434343434343434343434343434343434343434343443433434343434;
+
+java types
+1.text types 
+  char - single character
+  String - collection of characters
+2.Numbers
+  byte,short,int,long
+  float,double
+3.state type : on and off - booleans
+  true  - 1 bit
+  false - 0 bit
+
+4.Custom types :Create new Types by the programmer based on 1 ,2, 3
+   Reference types
+
+Error types:
+1.compile time error
+    compiler verfies your souce code ,test
+whether any violation.
+ Type violation.
+ if the variable is assigned wrong literal  which is not part of that type or its family
+ will produce compile time error.
+   ->The compiler will ensure the type of variable should match the value assigned.
+
+ byte b =10; //valid
+ byte b= true; //in valid
+
+Strongly Typed | static typing | early binding programming language
+  The programming language will test the type of variable during compile time phase.
+
+  c,c++,java,C# ,groovy....
+
+Weakly typed | dynamic typing | late binding programming language
+  The pl will test the type of variable during
+ runtime phase
+ js,groovy,scala,python.....
+ 
+2.Runtime error
+
+    (0)-100
+       |
+  byte b  =10 (0,1,1,0)
+   what is type of b => byte
+   what is type of 10 => int
+
+Note: the variable type is different from value type.
+ 
+Rules:
+ byte,short,int,long 
+    value type is by default is int(4 bytes)
+ byte b  =10(int)
+    
+   2 bytes= 4 bytes
+
+ type casting: converting from one type to another type.
+
+ float,double
+   default value type is double
+  float flt =90.78;
+
+ char
+   single character - ''
+  char storage 16 bit unicode character.
+   char a=90
+ booleans
+   boolean isValid = true;
+
+ String : collection of unicode characters
+///////////////////////////////////////////////////////////////
+Operators:
+
+Arthimetic operators:
+  +,-,*,/,%
+  ++,--
+
+comments: the information about your code
+// -single line comment
+/**
+
+**/
+
+Operator Overloading:
+
+ Changing Meaning of operator
+
+ + =>Addition - numbers 10 +10
+ + =>concatation = string+string or string + variable
+    "the result is" + result
+
+ counter = counter +1 equal to counter+=1
+
+///////////////////////////////////////////////////////////////
+The Equality and Relational Operators
+.....................................
+==      equal to
+!=      not equal to
+>       greater than
+>=      greater than or equal to
+<       less than
+<=      less than or equal to
+
+Operand
+  int x=1,y=2;
+  int r = x + y;
+          |     
+type result= operand  + operand
+                      |
+                  operation
+
+Quiz: Explore nummbers with respect to result type
+
+     int + int = ?
+     byte +short = ?
+     double + int =?
+
+==      equal to
+
+  Type operand 1 ==  Type operand 2 = boolean
+
+Note: equal operator works based on content
+!= ->operator is opposit to equal to operator
+
+/////////////////////////////////////////////////////////
+-greater than >  
+-less than <
+ type result = operand1 >  operand 2 
+ boolean result = 10 > 2;
+///////////////////////////////////////////////////////////////
+The Conditional Operators:
+
+&& Conditional-AND
+|| Conditional-OR
+!  Not
+
+Theses operators works based on truth table
+
+  t && t =true
+  f && f =f
+  t && f = f
+  
+boolean res= operand && operand
+ 		 |           |
+	     boolean     boolean
+//////////////////////////////////////////////////////////////
+Bitwise Operators: Convert numbers into bit pattern(0,1..)
+>> <<
+..............................................................
+Other operators:
+ ?:  - tenary operator
+ new - Object creation operator
+ instance of ->Type verification operator
+///////////////////////////////////////////////////////////////
+Control Structures and Statements:
+..................................
+1.decision making
+ -if
+   if 
+   if..else
+   if..elseif
+   if...else if ..else
+- switch..case
+statements
+break,continue
+
+//////////////////////////////////////////////////////////
+
+if Syntax:
+
+ if(condition) {
+   //
+ }
+
+{ }-block -if block
+
+condition should be boolean
+
+switch case : to avoid nested if..else or if..else if + ==
+ provide clean coding.
+
+switch(input){
+  case condition:
+     code...
+  default:
+    //similar to final else
+}  
+"break" not present if the code is inside function /method
+ will throw error called "not reachable"
+
+break statement stops further code execution,once the condition
+is evaulated true,will come out from the condition
+//////////////////////////////////////////////////////////////
+Looping: Iteration :Repeation:
+ Repeat the same thing until the condition is met.
+
+for,while,do..while
+
+for : iterator
+
+for(declaration and initalization;condition;incrementordecrement)
+
+for eg :  i want to produce 10 numbers
+   0..10
+condition - boolean - true | false
+ loop repet until condition is true.
+
+infinite loops:
+// infinite loop
+for ( ; ; ) {
+    
+    // your code goes here
+}
+for(int i=0; false;i++{}
+
+while(true){
+
+}
+
+do{}while(true)
+//////////////////////////////////////////////////////////
+
+How to get Input?
+->Through Java io- input and output
+->Through command line args
+
+Command line args:
+..................
+
+Passing input to the main method.
+
+
+class Adition{
+                         input
+                            |
+ public static void main(String[]args){
+
+    String a = args[0] //10
+    String b = args[1] //10
+   
+
+ }
+}
+
+ >java Addition 10 10 ->commandline input
+
+
+String to number conversion: casting
+
+///////////////////////////////////////////////////////////////
+Object oriented Programming concepts and Implementation:
+........................................................
+
+Object:
+
+please get employee information -
+copy text files from c drive to d drive
+please shutdown machine-01 at 11pm daily
+
+What is object?
+
+ ->Real world
+Chair is object?
+Account is Object?
+Customer is Object?
+
+God is Object? Yes  |No
+Heat is Object? 
+Love is Object?
+Hungry is Object?
+
+sleep is object?
+
+dance is object?
+.............................................................
+ "Any thing could be Object but that should be related to Problem Statement"
+
+SDLC
+1.Req Any - Object oriented Any 
+  - Identify Objects
+    eg :Account
+2.Design - converting req into documents
+  ->database design
+     -Objects are represented "tables"
+          -account
+  ->Program design - object oriented
+       -Account - java-class-Account -Diagrams - UML
+
+3.Development: You translate design into coding
+  Java
+   ->Source code representation
+   ->Runtime code representation
+
+Object identification:
+  ->Capturing Data points
+
+In Banking:
+Customer:X
+
+firstName,middleName,lastName
+Dob,address,mobileno,email,gender
+nationality,panno,adhno,accounttype
+nominee,amount,date,debit,onlinebanking,mobilbanking
+
+Object characteristics:
+1.state  -data
+ id,name,salary,department,noofleaves,...
+
+ data can be changed or not changed
+ name - not changed - constants
+ salary -changed
+
+How to implement state in program?
+  -variables
+
+2.behavior
+  verbs / actions which changes the state(data)
+ how to implement behavior in program?
+ -functions / methods
+
+3.identity
+  It is one the state which is used to identify the object.
+
+OOP principles  | concepts:
+..........................
+1.Abstraction
+2.Encapsulation
+3.Modualrity
+4.Hierachy
+5.Typing
+6.Concurrency
+7.Persistency.
+
+Concept
+1.Abstraction:
+   Taking necessary properties(charactertics) from the Object
+  and drop / leave / hide unncessary things.
+
+Implementation:
+2.Design
+  Customer in Banking System
+
+Customer
+ id
+ name
+ address
+ mobile
+ email
+ account type
+ account
+
+Program:
+class :
+  Blueprint of Object
+  Source code representation of Object(Domain/realworld)
+  fileName Customer.java
+  
+Note: class contains characteristics of object.
+     state,behavior,identity
+
+state && identity:
+variables
+  type variableName;
+
+
+Custom types:
+
+
+Stage-1
+	
+                  0,1 -Numbers
+		    |
+		  Machine
+
+
+Stage-2
+
+                  Text
+	         a - 97 - ascii
+		     
+		   |
+  		  0,1 -Numbers
+		    |
+		  Machine
+
+
+
+
+
+Stage-3 -High level programmers - Java
+
+
+  Number	                	  Text -char,String  byte,short,long,int,double,float		        			     	            a - 97 - ascii
+ ------------------------------------------------------------		           
+		    |
+  		  0,1 -Numbers
+		    |
+		  Machine
+
+Abstract data type theroy:
+--------------------------
+You can create new types on core types(byte,short,int,long,float,double,char)
+
+How to create new Type? - class
+  - struct,union - c-language
+   -c with class =>c++
+
+class Customer = {byte,int,short,long,float,double,char,boolean,other class}
+
+Customer ? = Type Name Which is eq int x;
+
+ Customer c; =>c is variable and its type is Customer
+ int x; =>x is variable and its type is int core type.
+
+ new  ->operator allocates memory for class
+        -Instance | Object - memory represention of class in          ram
+
+ Syntax for memory allocation for a  class:
+
+  Type Pointervariable = new Class()
+
+  Customer cust =    new     Customer();
+   |         |        |         |
+ Type     Variable  Operator Constructor call
+
+
+  Hey jvm ask the os allocate memory for a class called Customer, once allocation done, return the memory address to the variable called reference(pointer) variable "cust" and ensure that type is Customer.  - Object Creation / Instance creation /instation.
+
+///////////////////////////////////////////////////////////////
+How to work with state-data?
+
+1.initalize data
+2.process data
+3.read data
+
+1.initalize data - write operation
+
+Customer cust =new Customer();
+
+object access operator
+ .
+cust.state =  literal
+cust.behavior
+//////////////////////////////////Ac////////////////////////////
+
+behavior : methods / functions:
+
+1.change the data
+
+Account : withdraw and deposit ---operate on data--balance
+
+syntax:
+  
+    AccessSpecifer returntype methodName(args) { 
+
+
+    }
+
+   public double withdraw(double amount){
+ 
+     //logic to update balance  
+  }
+
+
+///////////////////////////////////////////////////////////////
+
+methods : change state - withdraw
+
+////////////////////////////////////////////////////////////
+
+state -Data initalization:
+
+1.After Object creation : after memory allocation
+1.1.->Direct initalization: you can access state using reference variable
+  Account acc = new Account();
+  acc.accno =1 ;
+  acc.name ="Test";
+1.2. ->through methods
+
+methods can be classified as follow 
+
+1.biz methods
+    biz methods which is used for data process / manipulation 
+eg withdraw
+
+2.state initalizer methods
+   methods which are used for state initalization and reading
+ only.
+   these methods are called as "setter" and "getter" methods
+  setters are otherwise called "mutator"
+  getters are otherwise called "accessor"
+
+General coding standards for methods:
+.....................................
+
+  Either biz method or accessor and mutator
+
+1.method name must be meaningfull.
+2.method name must be verb or verb+noun
+     withdraw,deposit,sleep,add,substract,save,find,delete...
+     saveAccount,withdrawMoney,addNumber
+3.method name must start smaller case
+  incase method+noun - noun must start uppercase.
+
+4.method may return or may return value
+  method no return - return type must be void
+    public  void add() {
+		
+	}
+    with return
+       public  int add() {
+		return 10;
+	}
+
+Arguments and parameters
+1.type of parameter and arg type must match
+2.Exact parameter ,args must match.
+
+        public int add(int x,int y) {
+		return x + y;
+	}
+
+methods: setter and getter methods:
+
+Rules:
+setter:
+
+1.setter must have public key word.
+2.setter must have void return return type.
+3.setter must start with "set" verb and following set,the state
+  variable must be presented as Noun.
+4.setter must take arg,its type must match state variable type.
+5.setter arg variable Name must match state variableName
+6.setter method body, must have code to initalize the state 
+  variable.
+    eg:
+		a=a
+
+7.For every state variable , you must have setter method
+
+
+
+Calculator calc=new Calculator();
+calc is "reference" variable
+this is "reference" variable
+ calc and this both are same ? =>yes
+   because both will point address of Calcuator Object(memory)
+
+calc is called "Explicit" reference variable,we declare.
+this is called "implicit" reference variable, the jvm declare
+
+In java : every object has "this" reference variable, declared,injected into object when object is created.
+
+When to use "this" ?
+1.when you want to avoid ambiguity in setters
+
+getters : to read state value
+
+1.getters must start "public" keyword
+2.getters must have return type,the type is the type of state
+3.getters must start with get,followed by state variable as noun
+4.getters must not have args
+5.gettters must return state variable
+ .For every state variable , you must have getter method
+
+/////////////////////////////////////////////////////////////
+
+setter and getter standard is called "Java Bean Standard"
+
+direct vs setter and getter mode of data initzation:
+
+1.As per java bean standard,you must use only setter and getter
+ pattern only not direct.
+
+
+2.During object creation:
+........................
+
+through constructor :
+  constructor is also method
+ 
+constructor:
+1.constructor is used to initalize the state.
+2.constructor is special method
+3.constructor method has some special syntax
+  3.1.constructor must not have return type
+  3.2.constructor name must be , the name of the Class
+  3.3.constructor may take arg or not
+  3.4.A class can have multiple constructor
+  3.5.Every class must have one constructor at least
+	if you dont write /provide constructor, the compiler   will provide constructor during compilation time.
+
+Circle.java -sc
+public class Circle {
+
+}
+compile
+Circle.class
+public class Circle {
+    //compiler will insert extra code: default constructor
+   public Circle(){
+
+   }
+}
+
+Circle(); //constructor(method) call - to initalize state during object is being ready.
+
+method call
+acc.withdraw(100) //method call->to manipulate the state after 
+object ready
+cust.setId(1) //method call ->to initalize state after object ready
+/////////////////////////////////////////////////////////////
+
+Default values for instance variables:
+if values are not initlized by programmer explicitly,jvm will initalize the values implicitly these values are called as "default values"
+
+Default values of in built types:
+1.byte,short,int,long - 0
+2.float,double - 0.0
+3.boolean -false
+4.char - '\u0000' -invisible unicode char
+5.Reference types-String,Customer... ->null
+
+
+eg:
+Circle.java
+public class Circle {
+	//int x, y;
+	float x,y;
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+
+
+Circle.class
+public class Circle {
+	//int x, y;
+	float x,y;
+
+         //extra code
+        public Circle(){
+           this.x = 0.0;
+           this.y =0.0;
+        }
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+
+///////////////////////////////////////////////////////
+
+Circle.java
+public class Circle {
+	//int x, y;
+	float x=1,y=1;
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+Circle.class
+public class Circle {
+	//int x, y;
+	float x=1,y=1;
+
+//extra code
+        public Circle(){
+           this.x = 1.0;
+           this.y =1.0;
+        }
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+
+//////////////////////////////////////////////////////////////
+
+Circle.java
+public class Circle {
+	// int x, y;
+	float x, y;
+
+	// Add constructor
+	public Circle() {
+		this.x = 1;
+		this.y = 1;
+	}
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+Circle.class
+public class Circle {
+	// int x, y;
+	float x, y;
+
+	// Add constructor
+	public Circle() {
+		this.x = 1;
+		this.y = 1;
+	}
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+///////////////////////////////////////////////////////////
+
+Constructor parameter and args: through which you can decide
+what is the default value of state variable
+
+Note: if there is any explicit constructor,the jvm wont insert
+ default constructor.we need to provide no-arg constructor.
+///////////////////////////////////////////////////////////////
+Encapsulation:
+.............
+ How to access state,methods,class,constructors etc..
+ Visibility : Who can access
+
+ Program1                Program2
+
+ code         <----------          
+  |
+variables
+metods
+class
+constructor
+
+How to enble encapsulation:
+  keywords -Access Modifiers
+
+public,private,default,proected
+
+public: code -class,variables(state),methods,constructors
+
+can i use public with class?
+ Yes!
+what is public?
+ public means the class can be accessed by any program , any where in the project.
+ 
+ public class ClassName{
+
+ }
+
+by any program , any where in the project: ?
+
+Modualrity :
+It is one of the core oo concept.
+
+Breaking the large thing into multiple units.
+
+Every pl supports modualrity.
+
+C,c++ => header files #include order.h,customer.h,billing.h
+
+java =>packages
+  package is collection of java files and collection of sub packages.
+
+Types of Modularity:
+1.logical modularity - code is spilt and linked by runtime through special syntax.
+  package - keyword
+  import  - keyword
+
+2.Physical modularity  - code is spilt and organized on hard disk.
+  folders-subfolders 
+
+
+Implementaion:
+
+Define modualrity:
+
+ package  com.tcs.igno.infra.machine
+  |    
+ keyword
+
+com.tcs.igno.infra.machine
+org.apache.tools.machine
+java.lang
+java.util
+javax.text
+
+com-company
+org-organization
+java-it represents core java project
+
+tcs-Name of the company
+igno -name of the project
+infra -Main module of the project
+machine-sub module inside infra
+
+eg:
+Customer.java
+
+package com.tcs.igno.acc;
+
+public class Customer {
+
+}
+Folder Structure:
+ src/com/tcs/igno/acc/Customer.java
+ bin/com/tcs/igno/acc/Customer.class
+
+
+
+import - is used to link programs
+
+import  logicalpackagestructure
+imoport com.tcs.igno.acc.Customer;
+
+
+default: package level scopping / within the same folder /package
+
+no keyword: consider default scope.
+
+Note:
+1.if the class is declared in default scope, the  other class in the package only can access.
+2.import statment not neccessary to link classes if it is in the same package-implicit linking
+  
+
+private : the classes can't be declared with private
+   -No private classes.
+
+
+protected: the classes can't be declared with protected 
+  -No protected classes
+
+import rules:
+1.you can import a particular class
+2.you can import all classes from one package - *.
+
+ coding standard:
+ 1.dont use *.
+
+Types of packages:
+1.in built packages
+  supplied by jdk,jre
+ all in built packages starts with java or javax.
+ in built package name cant be used as custom package
+
+java provides lot of packages based on development use case:
+
+java.lang
+   java.lang.System
+     System - class--jvm
+Note: the compiler and runtime will import java.lang automatically- default import.
+String,Object,Class,Short,Byte,Integer,Double,Float....
+
+java.util:
+   Data Structure
+   Utility classes like Scanner
+
+java.sql 
+Data base programming 
+java.io 
+io operations
+java.net
+ network programming such as sockets,udp,http
+java.text
+  Text processiong
+etc.................................
+2.custom packages
+ packages created by you.
+ com.tcs.
+ com.google
+ com.ibm
+
+3.thrid party packages
+ packages created and distributed by thrid parties
+ Spring,Hibernate,opensource projects such apache....
+
+Java Application Packaging Model:
+................................
+
+c,c++ => windows--exe,dll
+java  =>on any os 
+   =>jar  =>Java archive
+   =>war  =>web archive =>web development
+   =>Ear  =>enterprise archive =>Distributed Application
+
+how to distribute jar files to other people?
+
+1.pack the jar 
+2.host the jar in your web domain.
+   example.com -> download example
+
+
+build system:
+It is tool, used to distribute,install jar files from the central repo servers
+
+1.ant
+2.maven
+3.gradle - written in groovy
+
+///////////////////////////////////////////////////////////////
+
+public on instance variable
+ yes, but it is not recommended as per java bean standard.
+
+public on instance methods
+ yes, it is recommended,then only we can access outside.
+
+public on constructors 
+  Yes, it is also recommend.
+
+///////////////////////////////////////////////////////////////
+default:
+class - yes but class not available outside package
+instance variables - yes , not available outside package.
+instance methods - yes,not available outside package.
+constructor - yes,not available outside package.
+...........................................................
+private: within class
+
+class - no, no private class.
+instance variable -yes
+  Note: all instance variable must be marked private
+
+instance methods: -yes
+ private methods play vital role in development
+ private methods are used to design sub proceducers.
+
+//////////////////////////////////////////////////////////////
+Memory Model:
+
+Memory structures:
+1.heap
+2.stack
+3.method Area
+
+How memory is allocated?
+
+->code -- .class file
+
+e:/tcsproject
+       /bin/
+         com/
+           tcs/
+             greet/
+                  Hello.class --import Greeter.class
+
+
+java:jvm
+
+->code -- .class file--jvm
+
+java.lang.NoClassDefFoundError:
+ if jvm class loader not able load .class file into runtime
+reasons:
+1.file might have been corrupted or renamed,missed.
+
+java.lang.UnsupportedClassVersionError:
+  class file has been modified.
+
+
+code from disk-- .class file--jvm---class loader---.class
+
+ new Customer()---heap
+
+class Customer {
+   int id; //instance variable
+}
+
+how many objects y can create for a single .class file?
+  more -based on heap size
+
+  new Customer();
+  new Customer();
+  ...
+
+shared data: how to share data across the instances.
+
+static -key word for shared memory
+
+constants in java: once variable initalized , that variable
+cant be reinitalized.
+
+ final  -keyword to declare constant.
+
+shared data must be marked
+ public static final type VARIABLE=VALUE
+
+why main method marked as static?
+  in order to improve jvm startup process.
+
+who is calling main method?
+ -there is class supplied by jvm called "StartUp" class
+   class Startup{
+
+     run(){
+       App.main()
+     }
+  }
+  --native call-->StartUp()
+
+//////////////////////////////////////////////////////////////
+static methods:
+..............
+Similar to static variable,called without instance.
+
+Use case for static methods:
+
+1.Utility api
+  eg: java.lang.Math ->mathmetical operations
+2.To get Instance
+  private constructor:
+  static method    
+
+single ton:Explore single ton
+
+//////////////////////////////////////////////////////////////
+class Greeter{
+  private String name;
+  
+  public String sayHello(){}
+  public String sayHello(){}
+  public String sayHello(){}
+  ...
+}
+Greeter.class
+
+Greeter greet = new Greeter();
+greet.sayHello(); //get from heap -object
+
+ "methods are not part of heap memory, methods are stored inside method area only"
+
+ "Inside heap method implementation wont there rather than method reference(pointer)only will be there"
+
+greet.sayHello();
+  -->heap--->object--->refer-->vtable-->method---allocate memory---pushed stack--allocate memory---stack frame--cpu
+
+What is thread?
+   Single stack frame.
+
+1.greet.sayHello();--frame is running
+2.greet.sayHello();--
+
+public void add(){
+  double result=10 + 10; // //local variable
+}
+Where this local variable memory? and when it is initalized?
+  ->Inside stack frame , When method is pushed into stack,then
+frame is created.
+.............................................................
+System.out.println()  - API -Application Programming Interface               |                 -lib
+
+          jvmPrintln() - c
+	      |
+	   osPrintln() - os
+	     |
+	   halPrintln() - hal
+             |
+           hardware()---will run
+
+
+ System----Machine--Virtual Machine
+ System -----hard ware -input,output,error device
+
+  standard input device -keyboard
+   ""        output     -monitor
+   ""        error      -monitor
+
+ From java how to access keyboard,monitor
+  System----in--input
+  System----out --monitor
+
+System.out.println()
+ 
+System
+  out - static PrintStream out
+
+PrintStream- println
+
+Scanner scanner = new Scanner(System.in);
+				 |
+                               keyboard
+///////////////////////////////////////////////////////////////
+Hierarchy && Typing:
+....................
+Hierarchy which talks object relationship.
+
+1.Has-a
+2.IS-A - Inheritance
+
+Customer,Employee,Visitor
+
+1.Code duplication
+
+ if multiple classes share the same data 
+
+ 1.separate the data outside the class
+
+
+Chaining pattern:
+
+Address add= customer.getAddress();
+         |
+  Reference variable which has the "Address" Object
+add.getCity();
+
+Chaining pattern means , no need of extra variable,we can call 
+methods directly.
+
+customer.getAddress().getCity() === add.getCity();
+////////////////////////////////////////////////////////////
+
+JSON : Java Script Object Notation
+..................................
+
+What is JSON?
+
+Story Behind:
+ Ecommerce ---1999.
+
+Data Inter change Format
+
+2000-conference - Data Interchange Conference
+ 30+
+XML,JSON,text,tmp,properties..............
+
+
+XML - W3C standard
+
+2005 -Fall of XML
+
+2005 -JSON----Yet another data interchange format
+
+
+JSON is simple text file.
+JSON is simple strinf file
+JSON is simple ascii file
+JSON is platform(os) independant
+JSON is language independant.
+JSON is protocal inddependant.
+json discored from javascript literal object models
+
+Object: state
+
+javascript object state representation:
+
+Syntax:
+
+var customer = {
+  id : 1,
+  name:'Subramanian',
+  address:{
+     city:'chennai',
+     street:'10th'
+  }
+}
+
+JSON Representation:
+
+{
+  "id" : 1,
+  "name":"Subramanian",
+  "address":{
+     "city":"chennai",
+     "street":"10th"
+  }
+}
+
+/////////////////////////////////////////////////////////////
+How to implement JSON?
+
+JSON simple text file or String representation.
+
+Every programming language who provides JSON Parser lib.
+
+Java -
+C++ 
+Python-
+Javascript-parser
+
+//////////////////////////////////////////////////////////
+
+java Parser:
+///////////
+GSon - google parser for java 
+
+gson parser is just jar file.
+
+gson maven.
+////////////////////////////////////////////////////////
+
+json parser : Gson
+
+Steps:
+1.create Parser Object
+    Gson parser=new Gson();
+2.you can use two basic api
+  2.1. to convert java object into json
+	String result = parser.toJson(object)
+  2.2. to convert existing json into java object
+         Customer cust = parser.toJson(result,Customer.class);
+
+
+///////////////////////////////////////////////////////////////
+
+Data Structure:
+
+  What is data ? What is Structure?(storage)?
+
+Storage:
+  1.single item ->int id;
+  2.multiple items -> [id,id,id] - Array
+
+Data Sructure:
+1.static/constant/fixed data Structure
+2.dynamic dataStructure
+
+Java and Data Structure:
+
+Java focus only logic not infrastructure.
+Java represent array as Object,Storage Object.
+Array can hold any type of data  from primitive to Objects
+Array can store data continuously
+
+Array can be declared in two ways
+
+1. type[] variableName=new type[size];
+
+int[] scores = new int[5];
+		scores[0] = 90;
+		scores[1] = 76;
+		scores[2] = 23;
+		scores[3] = 90;
+		scores[4] = 99;
+		int size = scores.length;
+		System.out.println("Size of the Array :" + size);
+		System.out.println(scores[0]);
+		System.out.println(scores[1]);
+		System.out.println(scores[2]);
+		System.out.println(scores[3]);
+		System.out.println(scores[4]);
+		// using loop get the value
+		for (int i = 0; i < size; i++) {
+			System.out.println(scores[i]);
+		}
+
+2.// syntax 2
+  double prices[] = { 13, 89, 90, 86, 23, 56 };
+  //int priceSize = prices.length;
+  //System.out.println(priceSize);
+  System.out.println("Prices...");
+  for (int i = 0; i < prices.length; i++) {
+	System.out.println(prices[i]);
+  }
+
+/////////////////////////////////////////////////////////
+
+List of Customers:
+..................
+package com.tcs.tra.core;
+
+import com.google.gson.Gson;
+import com.tcs.igno.hasa.Address;
+import com.tcs.igno.hasa.Customer;
+
+public class ComplexArray {
+	public static void main(String[] args) {
+		// Address
+//		Address address1 = new Address("156", "10th", "Sowmya Nagar", "Chennai", "TN");
+//		// Address is linked with Customer
+//		Customer customer1 = new Customer(1, "Subramanian", address1);
+//
+//		Address address2 = new Address("158", "10th", "Sowmya Nagar", "Chennai", "TN");
+//		// Address is linked with Customer
+//		Customer customer2 = new Customer(2, "Ram", address2);
+//
+//		Address address3 = new Address("158", "10th", "Sowmya Nagar", "Chennai", "TN");
+//		// Address is linked with Customer
+//		Customer customer3 = new Customer(3, "Mohan", address3);
+
+		// Customer[] customers = { customer1, customer2, customer3 };
+
+		Customer[] customers = {
+				new Customer(1, "Subramanian", new Address("156", "10th", "Sowmya Nagar", "Chennai", "TN")),
+				new Customer(2, "Ram", new Address("158", "10th", "Sowmya Nagar", "Chennai", "TN")),
+				new Customer(3, "Mohan", new Address("158", "10th", "Sowmya Nagar", "Chennai", "TN"))
+		};
+
+		// Report
+		System.out.println(".....Customer Details....");
+		for (int i = 0; i < customers.length; i++) {
+			Customer customer = customers[i];
+			System.out.println("Id : " + customer.getId());
+			System.out.println("Name :" + customer.getName());
+			System.out.println("Door No :" + customer.getAddress().getDoorno());
+			System.out.println("Street :" + customer.getAddress().getStreet());
+			System.out.println("Area : " + customer.getAddress().getStreet());
+			System.out.println("City : " + customer.getAddress().getCity());
+			System.out.println("State :" + customer.getAddress().getState());
+			System.out.println("---------------------------------------------------");
+		}
+		// json
+		Gson parser = new Gson();
+		// Convert Customer Object into JSON
+		String json = parser.toJson(customers);
+		System.out.println(json);
+
+	}
+}
+///////////////////////////////////////////////////////////////
+
+Iteration:
+1.for...loop
+for(int i =0;i<customers.length;i++){
+  Customer customer = customers[i]
+  ....
+}
+2.for..each
+   simplest loop built on top of for loop only....
+
+  for(Type variable:array){
+
+    Sys(variable.property)
+ }
+
+//////////////////////////////////////////////////////////////
+IS-A Relationship:
+.................
+
+Inheritance:
+  Connecting two classes.
+
+Why Inheritance?
+1.code reuse - to avoid code duplication
+
+extends is keyword to connect two classes-inheritance
+
+Parent class,Base class,Super class: The class which to be connected with other classes (Child class,sub class)
+
+once if we link two classes through extends keyword,
+  "Base class" instance variables,methods will be copied into
+child class during compile time.
+   "only default,public,protected not private".
+   "no static variables,methods copied"
+
+public class Person {
+  String firstName, MiddleName, lastName;
+
+}
+class Customer extends Person{
+
+}
+class Employee{
+
+}
+class Visitor{
+
+}
+class Client{
+
+}
+
+//////////////////////////////////////////////////////////////
+How to initialize base class state?
+->via child class Object 
+   ->setters
+->via constructors how ?
+   super keyword
+
+protected 
+   it is like private - you cant access outside class directly
+   it is like public/default  - you can access only inside                   child class
+
+
+"super" =>It is reference variable like "this"
+
+ super is reference variable which points the Parent Object  from child
+ this is reference variable which points the same Object  (current Object)
+
+  new Customer() //calling constructor
+  this() //calling current class constructor
+  super() // calling super class constructor
+  
+  this(parameters) 
+  super(parameters)
+
+//////////////////////////////////////////////////////////////
+methods and inheritance:
+........................
+
+You have written: 
+
+Animal.java
+public class Animal {
+	public String eat() {
+		return "Animal eats";
+	}
+}
+Tiger.java
+public class Tiger extends Animal {
+
+}
+...........................................
+After compilation
+
+Animal.class
+public class Animal {
+	public String eat() {
+		return "Animal eats";
+	}
+}
+
+Tiger.class
+public class Tiger extends Animal {
+      public String eat() {
+	return super.eat()
+      }
+}
+Tiger tiger =new Tiger();
+System.out.println(tiger.eat());
+
+//////////////////////////////////////////////////////////////
+Overriding: the base class method can be redefined as it is 
+in child class with new behavior(algorthim).
+
+public class Animal {
+	public String eat() {
+		return "Animal eats";
+	}
+}
+public class Tiger extends Animal {
+	public String eat() {
+		return "tiger eats";
+	}
+}
+Tiger tiger =new Tiger();
+System.out.println(tiger.eat());
+/////////////////////////////////////////////////////////////
+Typing:
+
+"A type is a precise characterization of structural or behavioral properties which a collection of entities all share"
+
+
+ "Typing is the enforcement Of the class of an object, such, that objects of different types may not be interchanged, or at the most, they may be interchanged only in very restricted ways"
+
+/////
+
+Is valid? -compile
+class Customer{ }
+Customer cust = new Customer();
+   |       |
+Type     variable
+
+Is valid? -compile : no - type mismatch 
+Customer cust = new Tiger();
+
+///////////////////////////////////////////////////////////////
+
+Programming to sub type or concret type or same type
+  Customer cust =new Customer();
+ Left side and Right side same
+
+Programming to Super type or base type 
+
+Animal tiger = new Tiger();
+///////////////////////////////////////////////////////////////
+
+ Binding :
+      The assocation of value with variable
+  
+  int a =10;
+  class Hello{
+     public String sayHello(){return "Hello"}
+  }
+   Hello hello=new Hello();
+   hello.sayHello();
+
+Polymorphism:
+
+ Implementation of Typing theory
+ Compile time Polymorphism :
+     Compile time variable and method binding
+ Runtime Polymorphism:
+     method invocation
+//////////////////////////////////////////////////////////////
+
+Program to supertype:
+....................
+
+class Animal {}
+
+class Tiger {}
+
+Tiger t =new Tiger();
+Animal a=new Tiger();
+Object o =new Tiger();
+
+default Inheritance:
+...................
+
+Welcome.java
+
+class  Welcome{}
+
+Welcome.class
+
+class Welcome extends java.lang.Object{
+
+}
+
+Animal.java
+class Animal {}
+
+Tiger.java
+class Tiger extends Animal{}
+
+
+Animal.class
+class Animal extends java.lang.Object {
+
+}
+
+class Tiger extends Animal{}
+///////////////////////////////////////////////////////
+
+java.lang.Object Api:
+.....................
+
+
+1.equals
+ == is operator is used to test two values are equal or not
+ int a =10;
+ int b =10;
+ a==b = true
+
+ == operator
+  ->prmitives test content
+  ->objects test the memory address.	
+
+equals method is used to test object equality
+  -
+//////////////////////////////////////////////////////////////
+String:
+ ->String is object
+ ->String is instance of java.lang.String class.
+ ->String objects are created without new operator but we can create with new operator as well but it is not recommend
+
+  String name="Ram" // String name=new String("Ram")
+
+Strings and == and equals method:
+................................
+
+Customer cust1=new Customer();
+Customer cust2=new Customer();
+cust1==cust2 =>false
+
+String str="Hello";
+String name="Hello";
+
+
+String Immutablity:
+
+1.Strings are allocated in string constant pool.
+2.If two or more String objects has similar string literals
+  shares the only one copy.
+3.If you perform any string maniuplation, new Object is created
+  original copy is retained-Immuability.
+
+String operations are chainable:
+
+String result ="hello".trim().toUppercase().trim();
+
+Note: please explore string apis.
+////////////////////////////////////////////////////////////
+
+Object : toString();
+ We can print object information in string form
+
+Object : hashcode();
+ hascode is fake memory address given to object.
+
+we can get the address allocated by jvm.
+
+//////////////////////////////////////////////////////////////
+
+Wrapper classes:
+...............
+
+Object representation of primitive types.
+
+int      --- java.lang.Integer
+boolean  --   Boolean
+byte     --- Byte
+short    --- Short
+long     --- Long
+float    --- Float
+double   --- Double
+char     ----Character
+
+Why Wrappers?
+  Because of  Collections.
+
+Casting: coverting from one to another type
+
+1.Implicit casting
+ int a=10;(int)
+ byte bb=11;
+ int b =bb; 
+ Animal a = new Tiger();
+2.expclit casting
+double d=100;
+int a = (int)d;
+ Animal a = new Tiger(); 
+ Tiger t = (Tiger)a;
+
+  
+3.Boxing and Unboxing
+Boxing : Primitive to Wrapper
+UnBoxing : wrapper to Primitive
+
+Boxing: traditional way
+Integer one = new Integer(1); // int one =1
+System.out.println(one.intValue()); // object to primitive
+
+Boxing : new school
+Integer one =1;
+
+
+4.String to Numbers Conversion
+  String a="100";
+  int i = Integer.parseInt(a)
+  double d =Double.parseDouble(a)
+
+//////////////////////////////////////////////////////////////
+
+Inheritance Implementation:
+1.concrete class
+2.interface 
+3.Abstract class
+
+1.Concrete Class:
+
+public class Animal {
+	public String eat() {
+		return "Animal eats";
+	}
+}
+
+public class Tiger extends Animal {
+
+	public String hunt() {
+		return "Tiger Hunting";
+	}
+
+}
+
+2.Interface based inheritance
+
+1.What is interface?
+ Interface is just class.
+
+public interface NameOfTheInterface{
+   //behavior with out implementation
+}
+
+
+
+class Bird{
+  fly
+  land
+  takeOff
+}
+
+class Flight{
+   fly
+   land
+   takeOff
+}
+
+interface:
+  Common behavior across the differnt family of objects.
+
+Rules to write interface:
+
+1.interface can have method declarations only
+    -abstract methods -  no definition
+public interface Flyable {
+   abstract String fly();//declaration
+}
+2.interface methods are by default public only
+public interface Flyable {
+  public abstract String fly();//declaration
+}
+
+2.1.interface methods by default public,by default abstract 
+    so that we need not use public and abstract keywords
+
+3.interfaces can have variables
+   public static final String variableName="tttt"
+
+4.default methods: java 8 addition
+   interface can have implemenation.
+
+5.interfaces can be marked public,default
+
+6.interfaces can be inherited by a class and also another interface.
+
+  class with interface
+  "implements" key word is used to inherit
+ As soon you implement, the compiler forces you to over ride
+method.
+
+7.Interface can extend another interface
+
+8.interface cant implement other interface
+
+9.class can implement multiple interface but class cant extends
+  multiple classes.
+
+///////////////////////////////////////////////////////////
+
+Application Layering:
+
+1.Front end-UI
+2.Service - Biz apis
+3.Stroage -Storage
+
+///////////////////////////////////////////////////////////////Abstract classes:
+................
+
+public abstract class Animal {
+	public abstract String eat();
+
+	public String saveAnimal() {
+		return "Save Animal from Hunters";
+	}
+}
+public static void main(String[] args) {
+		Animal ani;
+		ani = new Cat();
+		System.out.println(ani.eat());
+		System.out.println(ani.saveAnimal());
+		
+		ani = new Dog();
+		System.out.println(ani.eat());
+		System.out.println(ani.saveAnimal());
+		
+		Greeter greeter;
+		greeter =new Hello();
+		System.out.println(greeter.sayHello());
+		System.out.println(greeter.greet());
+	}
+//////////////////////////////////////////////////////////////
+Final class:
+
+All classes are inheritable:
+ To prevent a class to be inherited- final classes
+ To prevent a method from the class to be overriden - final methods.
+///////////////////////////////////////////////////////////////
+Error Handling:
+
+1.What is error?
+  Mistake
+
+Types of error?
+1.compile time error
+   Due to syntax viloation
+   Can be fixed easily
+2.Runtime error.
+   Due to application logic
+   Cant be identified during development cycle
+   May come at any time.
+
+Java and Runtime Error Handling:
+
+1.Java Runtime error handling is called as "Exception Handling".
+2.Exception handling in java is object oriented-Errors can be represented as Object,these objects can be used to inspect root cause of error later.
+
+How to handle runtime error?
+ keywords : try,catch,finally,throw,throws
+
+try{
+  //biz logic 
+   
+}
+catch(ArithmeticException errorInfo){
+ //reporting logic
+}
+
+Error Stack trace:
+ The complete information about error
+  ->From where till error point.
+
+
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at com.tcs.igno.app.Calculator.divide(Calculator.java:14)
+	at com.tcs.igno.app.CalculatorApp.main(CalculatorApp.java:13)
+
+/////////////////////////////////////////////////////////////
+
+Types of Exception:
+
+1.Exception handled , reported by jvm
+    ->UnChecked Exception
+  ->Exception which is not very danager-easily can be fixed
+
+2.Exception handled , reported by programmer
+    ->Checked Exception
+  ->Exception is really danager-cant be fixed
+
+
+UnChecked Exception: How to identify unchecked exception
+
+Exception hierachy: Exception inheritance tree.
+
+
+   java.lang.Throwable
+	 |
+         java.lang.Exception
+	  |		|
+	  		java.lang.RuntimeException
+		               |
+			  unchecked Exception classes
+ checked
+
+Note:
+  Checked exception must be handled by programmer using
+  try...catch
+  UnChecked exception need not be handled by programmer
+  using try..catch-jvm will handle
+
+
+Common Unchecked Exceptions:
+
+1.ArithmeticException : / 0
+2.NullPointerException :
+   ->Exception is thrown when no object is pointed by variable
+    and if you try to access object properties.
+3.ArrayIndexOutOfBoundsException:
+   when store array items beyond size
+
+CheckedException: along with custom exception.
+
+////////////////////////////////////////////////////////
+
+Custom Exception: Application Exception:
+The exception is created for application specific error handling.
+
+In banking, if you try to with draw money, if money not there , you can throw "BalanceNotFoundException"
+
+It can be Checked or UnChecked
+
+How to create Checked Exception:
+
+Steps:
+
+1.Create Exception class, that class should extend "java.lang.Exception"
+
+public class BalanceNotFoundException extends Exception {
+
+}
+2.Provide two constructors
+public class BalanceNotFoundException extends Exception {
+	public BalanceNotFoundException() {
+		super();
+	}
+
+	public BalanceNotFoundException(String errorMessage) {
+		super(errorMessage);
+	}
+}
+
+3.declare class with method which has logic,something goes wrong in the logic i need to throw error
+
+	public void withdraw(double amount) {
+		if (this.balance >amount) {
+			this.balance = this.balance - amount;
+			System.out.println(amount + "withdrawn and balance is  " + this.balance);
+
+		} else {
+			System.out.println("Balance not Found");
+		}
+	}
+
+
+4.throw : is used to throw error to the handler(catch)
+  Since Error is an object , that must be created first then you need to throw
+
+ throw new Exception
+
+public void withdraw(double amount) {
+		if (this.balance >amount) {
+			this.balance = this.balance - amount;
+			System.out.println(amount + "withdrawn and balance is  " + this.balance);
+
+		} else {
+			throw new BalanceNotFoundException("Balance Not found");
+		}
+	}
+
+5.Exception binding:
+   exception must be bound with method-
+
+ throws - keyword is used to bind exception
+ throws  - keyword can be used to avoid try..catch
+6.try {
+			bktransaction.withdraw(1200);
+			//BalanceNotFoundException e =new BalanceNotFoundException()
+		} catch (BalanceNotFoundException e) {
+			e.printStackTrace();
+			//System.out.println(e.getMessage());
+		}
+
+throws  - keyword can be used to avoid try..catch
+
+............................................................
+
+A single try can have multiple catch blocks
+
+	try {
+			bktransaction.withdraw(200);
+			double result = 10 / 0;
+
+			// BalanceNotFoundException e =new BalanceNotFoundException()
+		} catch (BalanceNotFoundException e) {
+			e.printStackTrace();
+			// System.out.println(e.getMessage());
+		} catch (ArithmeticException ae) {
+			ae.printStackTrace();
+
+		}
+
+
+java 8 syntax:
+catch (BalanceNotFoundException | ArithmeticException  e) {
+			e.printStackTrace();
+			
+		}
+
+finally:
+ it is block gets called whether you have error or not.
+finally block generally used to write "Memory Management Code".
+like closing files,sockets,database connectionss
+
+///////////////////////////////////////////////////////////////
