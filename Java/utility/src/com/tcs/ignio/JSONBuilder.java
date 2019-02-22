@@ -1,15 +1,17 @@
 package com.tcs.ignio;
 
 public class JSONBuilder {
-	private JSONBuilder(){
+	private JSONBuilder() {
 
-}
-	public String parse(){
-		return "hello";
-		
 	}
-	public String JSONBuilder build(){
+
+	public String parse() {
+		return "hello";
+
+	}
+
+	public static JSONBuilder build() {
 		return new JSONBuilder();
 	}
-		
-	}
+
+}

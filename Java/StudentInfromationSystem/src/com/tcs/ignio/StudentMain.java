@@ -10,9 +10,12 @@ public class StudentMain {
 		Student s3 = new Student(3, "Bob", 85, 45, 79);
 	
 		
-		System.out.println("TOTAL MARKS"+s1.totalMarks(s1.getEnglishMark(), s1.getMathsMark(), s1.getScienceMark()));
-		System.out.println("TOTAL MARKS"+s2.totalMarks(s2.getEnglishMark(), s2.getMathsMark(), s2.getScienceMark()));
-		System.out.println("TOTAL MARKS"+s3.totalMarks(s3.getEnglishMark(), s3.getMathsMark(), s3.getScienceMark()));
+		System.out.println("TOTAL MARKS "+s1.totalMarks());
+		System.out.println("TOTAL MARKS "+s2.totalMarks());
+		System.out.println("TOTAL MARKS "+s3.totalMarks());
+		
+		//System.out.println("TOTAL MARKS"+s2.totalMarks(s2.getEnglishMark(), s2.getMathsMark(), s2.getScienceMark()));
+		//System.out.println("TOTAL MARKS"+s3.totalMarks(s3.getEnglishMark(), s3.getMathsMark(), s3.getScienceMark()));
 	}
 
 }

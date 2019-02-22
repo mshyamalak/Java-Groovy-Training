@@ -44,22 +44,16 @@ public class Student {
 		return scienceMark;
 	}
 
-	private int totalMarks(int englishMark, int mathsMark, int scienceMark){
-		int totalMarks = englishMark + mathsMark + scienceMark;
+	public int totalMarks(){
+		int totalMarks = this.englishMark + this.mathsMark + this.scienceMark;
 		return totalMarks;
 	}
 	
-	
-	}
 	public int average(){
-		int marks = totalMarks();
-		int average = marks/3;
+		int average = totalMarks()/3;
 		return average;
 	}
 
-	public int rank(){
-		switch()
-	}
 	}
 
 
