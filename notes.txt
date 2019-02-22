@@ -1,0 +1,1265 @@
+Ubuntu Pastebin
+Paste from test at Thu, 14 Feb 2019 07:40:23 +0000
+Download as text
+ 
+Java
+
+
+ Pl - Simple way to talk to os shell
+
+os shell
+ 10 + 10
+
+ HLL -->Assembly---low level bit patterns
+
+ HLL-program1--->assembly --->program2--loaded  on os--hardware--will run the code.
+
+ program1 -compiler
+ program2- runtime
+
+Green: 1989 - SUN
+   Objective: Build one software for all os    
+
+1989 -1990-->1991-Test faild
+
+1991---->Virtual computing---jvm--virtual os   
+
+////////////////////////////////////////////
+JVM --Code?
+
+Pl - java Programming language
+..............................
+
+What is java pl?
+
+java pl is object oriented,functional  programming language.
+
+Programming paradigms:
+Paradigm means way of solving the problem.
+
+The language is just tool which implments the paradigm.
+
+Paradigms:
+1.procedure - c
+2.oo - c++,java,c#..
+3.fp - scheme,js,java,groovy,scala..
+4.Event driven
+5.Reactive programming
+......
+java is now object oriented, functional ,event driven,reactive programming.
+
+polyglot : Many programming languages,but runtime is same
+
+java,groovy,scala,kotlin,Ruby ----->JVM
+
+.............................................
+
+Language Design:
+1.Language fundamentals
+2.Object oriented programming
+3.Exception handling
+4.Collections
+5.IO
+
+////////////////////////////////////////
+How to start development?
+Compiler,IDE
+
+compiler,runtime => jdk - >java development kit - collection of tools and basic libs to write ,compile,test java programs.
+
+jdk is contains
+1.bin folder
+2.jre folder
+3.lib folder
+
+compiler  -javac - will convert java source code into byte code(assembly)
+
+runtime - java- will run byte on os
+
+libs - jre/lib - runtime libs
+////////////////////////////////////////////
+
+java version:
+java or jdk 1.0
+java 2
+java 3
+java 4
+java 5 - major improvments
+java 6
+java 7
+java 8 ---stable version jdk 1.8
+java 9
+java 10 
+java 11 - beta current
+////////////////////////////////////////////
+
+Java Applications: editions
+1.desk top app - JSE -java Standard Edition
+2.web apps - JEE -java Enterprise
+3.Device apps - JME - java Micro Edition | java Mobile Edition
+//////////////////////////////////////////
+
+IDE : Eclipse, IntelliJ idea,vs code,notepad,notepad++
+
+/////////////////////////////////////////////
+Eclipse:
+
+Workspace: where you are going to store your java projects
+
+javaproject layout
+projectName
+   src- -souce code
+   bin  -compiled code
+
+Coding standards:
+
+1.Source program
+ FileName.java
+FileName rules
+1.FileName must be meaningfull to the problem statement.
+HelloWorld.java
+
+2.compiled Code
+  FileName.class - Assembly code
+
+javac HelloWorld.java
+
+ HelloWorld.class
+
+java HelloWorld
+  It will load jvm on os and will load HelloWorld.class.
+
+Every pl has entry point to start program execution - main method.
+
+c / c++
+void main(){
+
+}
+
+java main method
+
+public static void main(String[]args){
+   //start your app
+}
+
+main method will load jvm into os,and will load our code on jvm...
+
+
+public class HelloWorld {
+	public static void main(String[] args) {
+        //App starts
+		System.out.println("Hello Java!");
+	}
+}
+
+Language fundamentals:
+1.type system
+2.variables
+3.literals
+4.operators
+5.control structures
+6.looping
+
+1.type system
+2.variables
+3.literals
+
+Pl -  to create program--->collection of instructions.
+Instructions  -  collection of data , how to process the data.
+
+Software:
+ ->Store the data
+ ->process the stored data
+ ->Get the Report after processing
+
+Store the data:
+1.Persitant storage - Permanent storage
+   ->File System-->data base
+2.Non persistant storage - In memory storage
+   ->Data is stored in RAM,CPU Registers
+
+In java
+ ->Store the data 
+    ->In memory
+       ->variables : Data Holder,Stores data
+     variable type x=10-value(data)-literals
+     variable type y=10;
+ ->process the stored data
+     variable result = x + y;
+ ->Get the Report after processing
+     print the result is result -read,write
+
+  type variable=value(literal)
+
+  type-->numbers-0,1 -core type.
+
+  Abstract data types
+     create new types on core type.
+
+  number
+     -text,nontext
+
+  text =characters---string
+  nontext -number
+  number
+    dec,oct,hex,binary
+   
+ 1
+ 45.89
+ 7777777777777777777777777777777777  
+ 89.9e4
+ every storage capacity called size
+ based on value,jvm will request the space  to store the value. 
+
+ int x=10;--->jvm will request os--->hardware   that i need 2 bytes memory.
+
+ number --byte,short,int,long,float,double
+
+ 10 -- 100100001
+
+int 4 bytes -2,147,483,648 to 2,147,483,647.
+
+byte 1 byte -128 to 127.
+
+byte a =10; //valid
+byte b =150; error
+
+price =90.89 // 4 bytes | 8 bytes
+
+BigInteger lightSpeed=934343434343434343434343434343434343434343434343434343434343434343434343443433434343434;
+
+java types
+1.text types 
+  char - single character
+  String - collection of characters
+2.Numbers
+  byte,short,int,long
+  float,double
+3.state type : on and off - booleans
+  true  - 1 bit
+  false - 0 bit
+
+4.Custom types :Create new Types by the programmer based on 1 ,2, 3
+   Reference types
+
+Error types:
+1.compile time error
+    compiler verfies your souce code ,test
+whether any violation.
+ Type violation.
+ if the variable is assigned wrong literal  which is not part of that type or its family
+ will produce compile time error.
+   ->The compiler will ensure the type of variable should match the value assigned.
+
+ byte b =10; //valid
+ byte b= true; //in valid
+
+Strongly Typed | static typing | early binding programming language
+  The programming language will test the type of variable during compile time phase.
+
+  c,c++,java,C# ,groovy....
+
+Weakly typed | dynamic typing | late binding programming language
+  The pl will test the type of variable during
+ runtime phase
+ js,groovy,scala,python.....
+ 
+2.Runtime error
+
+    (0)-100
+       |
+  byte b  =10 (0,1,1,0)
+   what is type of b => byte
+   what is type of 10 => int
+
+Note: the variable type is different from value type.
+ 
+Rules:
+ byte,short,int,long 
+    value type is by default is int(4 bytes)
+ byte b  =10(int)
+    
+   2 bytes= 4 bytes
+
+ type casting: converting from one type to another type.
+
+ float,double
+   default value type is double
+  float flt =90.78;
+
+ char
+   single character - ''
+  char storage 16 bit unicode character.
+   char a=90
+ booleans
+   boolean isValid = true;
+
+ String : collection of unicode characters
+///////////////////////////////////////////////////////////////
+Operators:
+
+Arthimetic operators:
+  +,-,*,/,%
+  ++,--
+
+comments: the information about your code
+// -single line comment
+/**
+
+**/
+
+Operator Overloading:
+
+ Changing Meaning of operator
+
+ + =>Addition - numbers 10 +10
+ + =>concatation = string+string or string + variable
+    "the result is" + result
+
+ counter = counter +1 equal to counter+=1
+
+///////////////////////////////////////////////////////////////
+The Equality and Relational Operators
+.....................................
+==      equal to
+!=      not equal to
+>       greater than
+>=      greater than or equal to
+<       less than
+<=      less than or equal to
+
+Operand
+  int x=1,y=2;
+  int r = x + y;
+          |     
+type result= operand  + operand
+                      |
+                  operation
+
+Quiz: Explore nummbers with respect to result type
+
+     int + int = ?
+     byte +short = ?
+     double + int =?
+
+==      equal to
+
+  Type operand 1 ==  Type operand 2 = boolean
+
+Note: equal operator works based on content
+!= ->operator is opposit to equal to operator
+
+/////////////////////////////////////////////////////////
+-greater than >  
+-less than <
+ type result = operand1 >  operand 2 
+ boolean result = 10 > 2;
+///////////////////////////////////////////////////////////////
+The Conditional Operators:
+
+&& Conditional-AND
+|| Conditional-OR
+!  Not
+
+Theses operators works based on truth table
+
+  t && t =true
+  f && f =f
+  t && f = f
+  
+boolean res= operand && operand
+ 		 |           |
+	     boolean     boolean
+//////////////////////////////////////////////////////////////
+Bitwise Operators: Convert numbers into bit pattern(0,1..)
+>> <<
+..............................................................
+Other operators:
+ ?:  - tenary operator
+ new - Object creation operator
+ instance of ->Type verification operator
+///////////////////////////////////////////////////////////////
+Control Structures and Statements:
+..................................
+1.decision making
+ -if
+   if 
+   if..else
+   if..elseif
+   if...else if ..else
+- switch..case
+statements
+break,continue
+
+//////////////////////////////////////////////////////////
+
+if Syntax:
+
+ if(condition) {
+   //
+ }
+
+{ }-block -if block
+
+condition should be boolean
+
+switch case : to avoid nested if..else or if..else if + ==
+ provide clean coding.
+
+switch(input){
+  case condition:
+     code...
+  default:
+    //similar to final else
+}  
+"break" not present if the code is inside function /method
+ will throw error called "not reachable"
+
+break statement stops further code execution,once the condition
+is evaulated true,will come out from the condition
+//////////////////////////////////////////////////////////////
+Looping: Iteration :Repeation:
+ Repeat the same thing until the condition is met.
+
+for,while,do..while
+
+for : iterator
+
+for(declaration and initalization;condition;incrementordecrement)
+
+for eg :  i want to produce 10 numbers
+   0..10
+condition - boolean - true | false
+ loop repet until condition is true.
+
+infinite loops:
+// infinite loop
+for ( ; ; ) {
+    
+    // your code goes here
+}
+for(int i=0; false;i++{}
+
+while(true){
+
+}
+
+do{}while(true)
+//////////////////////////////////////////////////////////
+
+How to get Input?
+->Through Java io- input and output
+->Through command line args
+
+Command line args:
+..................
+
+Passing input to the main method.
+
+
+class Adition{
+                         input
+                            |
+ public static void main(String[]args){
+
+    String a = args[0] //10
+    String b = args[1] //10
+   
+
+ }
+}
+
+ >java Addition 10 10 ->commandline input
+
+
+String to number conversion: casting
+
+///////////////////////////////////////////////////////////////
+Object oriented Programming concepts and Implementation:
+........................................................
+
+Object:
+
+please get employee information -
+copy text files from c drive to d drive
+please shutdown machine-01 at 11pm daily
+
+What is object?
+
+ ->Real world
+Chair is object?
+Account is Object?
+Customer is Object?
+
+God is Object? Yes  |No
+Heat is Object? 
+Love is Object?
+Hungry is Object?
+
+sleep is object?
+
+dance is object?
+.............................................................
+ "Any thing could be Object but that should be related to Problem Statement"
+
+SDLC
+1.Req Any - Object oriented Any 
+  - Identify Objects
+    eg :Account
+2.Design - converting req into documents
+  ->database design
+     -Objects are represented "tables"
+          -account
+  ->Program design - object oriented
+       -Account - java-class-Account -Diagrams - UML
+
+3.Development: You translate design into coding
+  Java
+   ->Source code representation
+   ->Runtime code representation
+
+Object identification:
+  ->Capturing Data points
+
+In Banking:
+Customer:X
+
+firstName,middleName,lastName
+Dob,address,mobileno,email,gender
+nationality,panno,adhno,accounttype
+nominee,amount,date,debit,onlinebanking,mobilbanking
+
+Object characteristics:
+1.state  -data
+ id,name,salary,department,noofleaves,...
+
+ data can be changed or not changed
+ name - not changed - constants
+ salary -changed
+
+How to implement state in program?
+  -variables
+
+2.behavior
+  verbs / actions which changes the state(data)
+ how to implement behavior in program?
+ -functions / methods
+
+3.identity
+  It is one the state which is used to identify the object.
+
+OOP principles  | concepts:
+..........................
+1.Abstraction
+2.Encapsulation
+3.Modualrity
+4.Hierachy
+5.Typing
+6.Concurrency
+7.Persistency.
+
+Concept
+1.Abstraction:
+   Taking necessary properties(charactertics) from the Object
+  and drop / leave / hide unncessary things.
+
+Implementation:
+2.Design
+  Customer in Banking System
+
+Customer
+ id
+ name
+ address
+ mobile
+ email
+ account type
+ account
+
+Program:
+class :
+  Blueprint of Object
+  Source code representation of Object(Domain/realworld)
+  fileName Customer.java
+  
+Note: class contains characteristics of object.
+     state,behavior,identity
+
+state && identity:
+variables
+  type variableName;
+
+
+Custom types:
+
+
+Stage-1
+	
+                  0,1 -Numbers
+		    |
+		  Machine
+
+
+Stage-2
+
+                  Text
+	         a - 97 - ascii
+		     
+		   |
+  		  0,1 -Numbers
+		    |
+		  Machine
+
+
+
+
+
+Stage-3 -High level programmers - Java
+
+
+  Number	                	  Text -char,String  byte,short,long,int,double,float		        			     	            a - 97 - ascii
+ ------------------------------------------------------------		           
+		    |
+  		  0,1 -Numbers
+		    |
+		  Machine
+
+Abstract data type theroy:
+--------------------------
+You can create new types on core types(byte,short,int,long,float,double,char)
+
+How to create new Type? - class
+  - struct,union - c-language
+   -c with class =>c++
+
+class Customer = {byte,int,short,long,float,double,char,boolean,other class}
+
+Customer ? = Type Name Which is eq int x;
+
+ Customer c; =>c is variable and its type is Customer
+ int x; =>x is variable and its type is int core type.
+
+ new  ->operator allocates memory for class
+        -Instance | Object - memory represention of class in          ram
+
+ Syntax for memory allocation for a  class:
+
+  Type Pointervariable = new Class()
+
+  Customer cust =    new     Customer();
+   |         |        |         |
+ Type     Variable  Operator Constructor call
+
+
+  Hey jvm ask the os allocate memory for a class called Customer, once allocation done, return the memory address to the variable called reference(pointer) variable "cust" and ensure that type is Customer.  - Object Creation / Instance creation /instation.
+
+///////////////////////////////////////////////////////////////
+How to work with state-data?
+
+1.initalize data
+2.process data
+3.read data
+
+1.initalize data - write operation
+
+Customer cust =new Customer();
+
+object access operator
+ .
+cust.state =  literal
+cust.behavior
+//////////////////////////////////Ac////////////////////////////
+
+behavior : methods / functions:
+
+1.change the data
+
+Account : withdraw and deposit ---operate on data--balance
+
+syntax:
+  
+    AccessSpecifer returntype methodName(args) { 
+
+
+    }
+
+   public double withdraw(double amount){
+ 
+     //logic to update balance  
+  }
+
+
+///////////////////////////////////////////////////////////////
+
+methods : change state - withdraw
+
+////////////////////////////////////////////////////////////
+
+state -Data initalization:
+
+1.After Object creation : after memory allocation
+1.1.->Direct initalization: you can access state using reference variable
+  Account acc = new Account();
+  acc.accno =1 ;
+  acc.name ="Test";
+1.2. ->through methods
+
+methods can be classified as follow 
+
+1.biz methods
+    biz methods which is used for data process / manipulation 
+eg withdraw
+
+2.state initalizer methods
+   methods which are used for state initalization and reading
+ only.
+   these methods are called as "setter" and "getter" methods
+  setters are otherwise called "mutator"
+  getters are otherwise called "accessor"
+
+General coding standards for methods:
+.....................................
+
+  Either biz method or accessor and mutator
+
+1.method name must be meaningfull.
+2.method name must be verb or verb+noun
+     withdraw,deposit,sleep,add,substract,save,find,delete...
+     saveAccount,withdrawMoney,addNumber
+3.method name must start smaller case
+  incase method+noun - noun must start uppercase.
+
+4.method may return or may return value
+  method no return - return type must be void
+    public  void add() {
+		
+	}
+    with return
+       public  int add() {
+		return 10;
+	}
+
+Arguments and parameters
+1.type of parameter and arg type must match
+2.Exact parameter ,args must match.
+
+        public int add(int x,int y) {
+		return x + y;
+	}
+
+methods: setter and getter methods:
+
+Rules:
+setter:
+
+1.setter must have public key word.
+2.setter must have void return return type.
+3.setter must start with "set" verb and following set,the state
+  variable must be presented as Noun.
+4.setter must take arg,its type must match state variable type.
+5.setter arg variable Name must match state variableName
+6.setter method body, must have code to initalize the state 
+  variable.
+    eg:
+		a=a
+
+7.For every state variable , you must have setter method
+
+
+
+Calculator calc=new Calculator();
+calc is "reference" variable
+this is "reference" variable
+ calc and this both are same ? =>yes
+   because both will point address of Calcuator Object(memory)
+
+calc is called "Explicit" reference variable,we declare.
+this is called "implicit" reference variable, the jvm declare
+
+In java : every object has "this" reference variable, declared,injected into object when object is created.
+
+When to use "this" ?
+1.when you want to avoid ambiguity in setters
+
+getters : to read state value
+
+1.getters must start "public" keyword
+2.getters must have return type,the type is the type of state
+3.getters must start with get,followed by state variable as noun
+4.getters must not have args
+5.gettters must return state variable
+ .For every state variable , you must have getter method
+
+/////////////////////////////////////////////////////////////
+
+setter and getter standard is called "Java Bean Standard"
+
+direct vs setter and getter mode of data initzation:
+
+1.As per java bean standard,you must use only setter and getter
+ pattern only not direct.
+
+
+2.During object creation:
+........................
+
+through constructor :
+  constructor is also method
+ 
+constructor:
+1.constructor is used to initalize the state.
+2.constructor is special method
+3.constructor method has some special syntax
+  3.1.constructor must not have return type
+  3.2.constructor name must be , the name of the Class
+  3.3.constructor may take arg or not
+  3.4.A class can have multiple constructor
+  3.5.Every class must have one constructor at least
+	if you dont write /provide constructor, the compiler   will provide constructor during compilation time.
+
+Circle.java -sc
+public class Circle {
+
+}
+compile
+Circle.class
+public class Circle {
+    //compiler will insert extra code: default constructor
+   public Circle(){
+
+   }
+}
+
+Circle(); //constructor(method) call - to initalize state during object is being ready.
+
+method call
+acc.withdraw(100) //method call->to manipulate the state after 
+object ready
+cust.setId(1) //method call ->to initalize state after object ready
+/////////////////////////////////////////////////////////////
+
+Default values for instance variables:
+if values are not initlized by programmer explicitly,jvm will initalize the values implicitly these values are called as "default values"
+
+Default values of in built types:
+1.byte,short,int,long - 0
+2.float,double - 0.0
+3.boolean -false
+4.char - '\u0000' -invisible unicode char
+5.Reference types-String,Customer... ->null
+
+
+eg:
+Circle.java
+public class Circle {
+	//int x, y;
+	float x,y;
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+
+
+Circle.class
+public class Circle {
+	//int x, y;
+	float x,y;
+
+         //extra code
+        public Circle(){
+           this.x = 0.0;
+           this.y =0.0;
+        }
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+
+///////////////////////////////////////////////////////
+
+Circle.java
+public class Circle {
+	//int x, y;
+	float x=1,y=1;
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+Circle.class
+public class Circle {
+	//int x, y;
+	float x=1,y=1;
+
+//extra code
+        public Circle(){
+           this.x = 1.0;
+           this.y =1.0;
+        }
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+
+//////////////////////////////////////////////////////////////
+
+Circle.java
+public class Circle {
+	// int x, y;
+	float x, y;
+
+	// Add constructor
+	public Circle() {
+		this.x = 1;
+		this.y = 1;
+	}
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+Circle.class
+public class Circle {
+	// int x, y;
+	float x, y;
+
+	// Add constructor
+	public Circle() {
+		this.x = 1;
+		this.y = 1;
+	}
+
+	public float getX() {
+		return x;
+	}
+
+	public void setX(float x) {
+		this.x = x;
+	}
+
+	public float getY() {
+		return y;
+	}
+
+	public void setY(float y) {
+		this.y = y;
+	}
+
+}
+///////////////////////////////////////////////////////////
+
+Constructor parameter and args: through which you can decide
+what is the default value of state variable
+
+Note: if there is any explicit constructor,the jvm wont insert
+ default constructor.we need to provide no-arg constructor.
+///////////////////////////////////////////////////////////////
+Encapsulation:
+.............
+ How to access state,methods,class,constructors etc..
+ Visibility : Who can access
+
+ Program1                Program2
+
+ code         <----------          
+  |
+variables
+metods
+class
+constructor
+
+How to enble encapsulation:
+  keywords -Access Modifiers
+
+public,private,default,proected
+
+public: code -class,variables(state),methods,constructors
+
+can i use public with class?
+ Yes!
+what is public?
+ public means the class can be accessed by any program , any where in the project.
+ 
+ public class ClassName{
+
+ }
+
+by any program , any where in the project: ?
+
+Modualrity :
+It is one of the core oo concept.
+
+Breaking the large thing into multiple units.
+
+Every pl supports modualrity.
+
+C,c++ => header files #include order.h,customer.h,billing.h
+
+java =>packages
+  package is collection of java files and collection of sub packages.
+
+Types of Modularity:
+1.logical modularity - code is spilt and linked by runtime through special syntax.
+  package - keyword
+  import  - keyword
+
+2.Physical modularity  - code is spilt and organized on hard disk.
+  folders-subfolders 
+
+
+Implementaion:
+
+Define modualrity:
+
+ package  com.tcs.igno.infra.machine
+  |    
+ keyword
+
+com.tcs.igno.infra.machine
+org.apache.tools.machine
+java.lang
+java.util
+javax.text
+
+com-company
+org-organization
+java-it represents core java project
+
+tcs-Name of the company
+igno -name of the project
+infra -Main module of the project
+machine-sub module inside infra
+
+eg:
+Customer.java
+
+package com.tcs.igno.acc;
+
+public class Customer {
+
+}
+Folder Structure:
+ src/com/tcs/igno/acc/Customer.java
+ bin/com/tcs/igno/acc/Customer.class
+
+
+
+import - is used to link programs
+
+import  logicalpackagestructure
+imoport com.tcs.igno.acc.Customer;
+
+
+default: package level scopping / within the same folder /package
+
+no keyword: consider default scope.
+
+Note:
+1.if the class is declared in default scope, the  other class in the package only can access.
+2.import statment not neccessary to link classes if it is in the same package-implicit linking
+  
+
+private : the classes can't be declared with private
+   -No private classes.
+
+
+protected: the classes can't be declared with protected 
+  -No protected classes
+
+import rules:
+1.you can import a particular class
+2.you can import all classes from one package - *.
+
+ coding standard:
+ 1.dont use *.
+
+Types of packages:
+1.in built packages
+  supplied by jdk,jre
+ all in built packages starts with java or javax.
+ in built package name cant be used as custom package
+
+java provides lot of packages based on development use case:
+
+java.lang
+   java.lang.System
+     System - class--jvm
+Note: the compiler and runtime will import java.lang automatically- default import.
+String,Object,Class,Short,Byte,Integer,Double,Float....
+
+java.util:
+   Data Structure
+   Utility classes like Scanner
+
+java.sql 
+Data base programming 
+java.io 
+io operations
+java.net
+ network programming such as sockets,udp,http
+java.text
+  Text processiong
+etc.................................
+2.custom packages
+ packages created by you.
+ com.tcs.
+ com.google
+ com.ibm
+
+3.thrid party packages
+ packages created and distributed by thrid parties
+
+ Spring,Hibernate,opensource projects such apache....
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
